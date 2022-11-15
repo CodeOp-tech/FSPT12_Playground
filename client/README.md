@@ -16,4 +16,7 @@ You may also see any lint errors in the console.
 
 # How to set up the client
 
-install react-router-dom by running   npm i react-router-dom 
+npm install
+npm i react-router-dom 
+npm i --save react-select
+npm install bootstrap react-bootstrap

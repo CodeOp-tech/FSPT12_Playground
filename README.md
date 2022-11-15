@@ -1,5 +1,18 @@
-#This is a playground from FSPT12 
+#This is a playground from FSPT12
 
-# Let's create our own branches, do some features and push them to the main branch 
+# Let's create our own branches, do some features and push them to the main branch
 
-I create Nadia's  feature 
+Recipes App
+
+Kriska's feature
+
+# Safiya's feature
+
+#Fabi's Feature
+
+# Hi.
+
+#Hi from Sofi
+
+# Hi from Nadia 
+

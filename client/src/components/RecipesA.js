@@ -15,11 +15,11 @@ export default function RecipesA() {
   //   getRecipes();
   // }, [])
 
-  const [recipes, setRecipes] = useState([]);
-  const [diet, setDiet] = useState("");
-  const [intolerance, setIntolerance] = useState("");
-  const [mealType, setMeal] = useState("");
-  const [userInput, setInput] = useState("");  
+  const [recipes, setRecipes] = useState({results: []});
+  const [diet, setDiet] = useState([]);
+  const [intolerance, setIntolerance] = useState([]);
+  const [mealType, setMeal] = useState([]);
+  const [userInput, setInput] = useState([]);  
 
   // should we put into the DB table? 
   const dietOptions = [
@@ -70,6 +70,9 @@ export default function RecipesA() {
   function handleSubmit(e) {
     e.preventDefault();
     getRecipes();
+    recipes.results.map((recipe) => {
+    console.log(recipe);
+    }) 
    }
 
   return (
@@ -172,18 +175,21 @@ export default function RecipesA() {
     
   <Container fluid>
    <Row>
-    <Col> 
-    <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="holder.js/100px180" />
+    <Col> {recipes.results.map((recipe) => {
+      <Card style={{ width: '18rem' }}>
+      <Card.Img variant="top" src={recipe.image} />
       <Card.Body>
-        <Card.Title>Card Title</Card.Title>
+        <Card.Title>{recipe.title}</Card.Title>
         <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
+          {recipe.summary}
         </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
+        <Button variant="primary">Add recipe</Button>
       </Card.Body>
     </Card>
+    }
+    )}
+
+    
      </Col>
     
     <Col> Recipe 2 </Col>
